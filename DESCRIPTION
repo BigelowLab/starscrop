@@ -1,0 +1,15 @@
+Package: starscrop
+Type: Package
+Title: Demostrate issue with stars::crop() in a package
+Version: 0.0.1
+Author: Ben Tupper <btupper@bigelow.org>
+Maintainer: Ben Tupper <btupper@bigelow.org>
+Description: Demostrate issue with stars::crop() in a package.
+URL: https://github.com/BigelowLab/starscrop
+Encoding: UTF-8
+Depends: R (>= 4.2.0)
+Imports:
+  sf,
+  stars,
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)

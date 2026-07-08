@@ -1,0 +1,40 @@
+---
+title: "starscrop"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a demonstration package to show the error when trying to use stars::st_crop() in a package context.
+
+> Error: 'st_crop' is not an exported object from 'namespace:stars'
+
+# Installation
+
+`
+remotes::install_github("BigelowLab/starscrop")
+`
+
+# Usage
+
+First, read data without cropping.
+
+```{r}
+library(starscrop)
+x = read_data(crop = NULL)
+plot(x)
+```
+
+Next, read the data with cropping.
+
+```{r}
+x = try(read_data(crop = get_bb()))
+if (!inherits(x, "try-error")) plot(x)
+```
+# Session Info
+
+```{r}
+sessionInfo()
+```
