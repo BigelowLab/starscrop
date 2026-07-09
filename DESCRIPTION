@@ -10,6 +10,6 @@ Encoding: UTF-8
 Depends: R (>= 4.2.0)
 Imports:
   sf,
-  stars,
+  stars
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)

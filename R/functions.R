@@ -16,8 +16,8 @@ read_data = function(filename = system.file("tif/L7_ETMs.tif", package = "stars"
                      crop = get_bb()){
   x = stars::read_stars(filename)
   if (!is.null(crop)){
-    cropbb = sf::st_bbox(crop, crs)
-    x = stars::st_crop(cropbb)
+    cropbb = sf::st_bbox(crop, crs = sf::st_crs(x))
+    x = st_crop(x, cropbb)
   }
   return(x)
 }
